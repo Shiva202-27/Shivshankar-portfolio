@@ -1,33 +1,62 @@
-const skills = [
-  "AWS",
-  "Linux",
-  "Docker",
-  "Kubernetes (kOps)",
-  "Git & GitHub",
-  "CI/CD",
-  "Terraform",
-];
+import { FaAws, FaDocker, FaLinux, FaGithub } from "react-icons/fa";
+import { SiKubernetes, SiTerraform } from "react-icons/si";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-slate-900">
-      <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-        Skills
-      </h2>
+    <section id="skills" className="py-40 flex justify-center">
+      <div className="w-full max-w-5xl px-6">
+        <h2 className="mb-14 text-6xl sm:text-6xl font-semibold text-center text-white">
+          Core Skills
+        </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center
-hover:-translate-y-2 hover:scale-[1.03]
-hover:shadow-xl hover:shadow-blue-500/20
-transition-all duration-300"
-          >
-            <p className="text-xl text-gray-200 font-semibold">{skill}</p>
+        {/* TABLE */}
+        <div className="border border-white/20">
+          {/* Row 1 */}
+          <div className="grid grid-cols-2">
+            <SkillBox>
+              <FaAws title="AWS" />
+            </SkillBox>
+            <SkillBox right>
+              <FaLinux title="Linux" />
+            </SkillBox>
           </div>
-        ))}
+
+          {/* Row 2 */}
+          <div className="grid grid-cols-2 border-t border-white/20">
+            <SkillBox>
+              <FaDocker title="Docker" />
+            </SkillBox>
+            <SkillBox right>
+              <SiKubernetes title="Kubernetes (kOps)" />
+            </SkillBox>
+          </div>
+
+          {/* Row 3 */}
+          <div className="grid grid-cols-2 border-t border-white/20">
+            <SkillBox>
+              <FaGithub title="Git & GitHub" />
+            </SkillBox>
+            <SkillBox right>
+              <SiTerraform title="Terraform" />
+            </SkillBox>
+          </div>
+        </div>
       </div>
     </section>
+  );
+}
+
+/* Reusable box */
+function SkillBox({ children, right }) {
+  return (
+    <div
+      className={`h-40 flex items-center justify-center
+        ${right ? "border-l border-white/20" : ""}
+        hover:bg-white/5 transition`}
+    >
+      <div className="text-blue-400" style={{ fontSize: "72px" }}>
+        {children}
+      </div>
+    </div>
   );
 }

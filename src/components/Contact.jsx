@@ -1,32 +1,52 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6 bg-slate-900 text-center">
-      <h2 className="text-4xl font-bold text-blue-400 mb-6">Contact Me</h2>
+    <section
+      id="contact"
+      style={{
+        padding: "120px 0",
+        textAlign: "center",
+      }}
+    >
+      <h2 style={{ fontSize: "32px", marginBottom: "40px" }}>Contact</h2>
 
-      <p className="text-gray-400 mb-8">
-        Open to DevOps, Cloud & Automation opportunities
-      </p>
-
-      <div className="flex justify-center gap-6">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "32px",
+        }}
+      >
         <a
-          href="mailto:your-email@gmail.com"
-          className="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500 transition"
+          href="mailto:shivk202vapm@email.com"
+          style={{
+            padding: "12px 24px",
+            borderRadius: "12px",
+            border: "1px solid rgba(255,255,255,0.3)",
+          }}
         >
           Email
         </a>
 
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/Shiva202-27"
           target="_blank"
-          className="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500 transition"
+          style={{
+            padding: "12px 24px",
+            borderRadius: "12px",
+            border: "1px solid rgba(255,255,255,0.3)",
+          }}
         >
           GitHub
         </a>
 
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/shivshankar-kasapnor-b44568239"
           target="_blank"
-          className="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500 transition"
+          style={{
+            padding: "12px 24px",
+            borderRadius: "12px",
+            border: "1px solid rgba(255,255,255,0.3)",
+          }}
         >
           LinkedIn
         </a>
